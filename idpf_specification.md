@@ -7539,16 +7539,12 @@ Note that num_queues may be larger than the default number of queues.
 
 # 
 
-# Device capabilities default values assumed by the IDPF driver
+# Default device capabilities and parameter values assumed by the IDPF driver
 
-Any drive that is compliant with the spec should assume the default
-value.  
-In order to use a non default value it must negotiate it with the
-control plane.  
+This section lists the default and possible values of parmeters associated with various device capabilities. By default, any driver that is compliant with the spec should use the default value for these parameters. In order to use a non default value, the driver must negotiate the values with the
+control plane. 
   
-Virtchannel data structures for vport configuration, queue configuration
-etc have enough padding defined to be able to accommodate negotiation in
-the future of non-default values with the Device control plane.
+Virtchannel data structures for vport configuration, queue configuration etc have enough padding defined to be able to accommodate negotiation of non-default values with the Device control plane in future.
 
 ### Interrupt capabilities
 
@@ -7568,13 +7564,13 @@ the future of non-default values with the Device control plane.
 </tr>
 <tr class="odd">
 <th>ITR interval granularity</th>
-<th>u8 itr_intvl_gran</th>
+<th>  </th>
 <th>0.5 us , 1 us , 2 us , 4 us</th>
 <th>2 us</th>
 </tr>
 <tr class="header">
 <th>Number of ITRs per vector</th>
-<th>u8 itr_idx_map</th>
+<th></th>
 <th>8’b00001011 - ITR0,ITR1 and NOITR.<br />
 8’b00001111 - ITR0,ITR1,ITR2 and NOITR.<br />
 <br />
@@ -7585,20 +7581,20 @@ Bit 3 (NOITR) represents a zero timer (immediate interrupt).</th>
 <tr class="odd">
 <th>ITR rate change piggybacked to an interrupt enablement
 operation</th>
-<th>VIRTCHNL2_CAP_INTR_ADAPT_WITH_INTENA</th>
+<th> </th>
 <th>0,1</th>
 <th>0</th>
 </tr>
 <tr class="header">
 <th>SW interrupt triggering that is piggybacked to an interrupt
 enablement operation</th>
-<th>VIRTCHNL2_CAP_INTR_SW_INTR_WITH_INTENA</th>
+<th> </th>
 <th>0,1</th>
 <th>0</th>
 </tr>
 <tr class="odd">
 <th>SW interrupt triggering as an individual operation</th>
-<th>VIRTCHNL2_CAP_INTR_SW_INTR_INDV</th>
+<th> </th>
 <th>0,1</th>
 <th>0</th>
 </tr>
@@ -7624,40 +7620,39 @@ enablement operation</th>
 <th><strong>Default value</strong></th>
 </tr>
 <tr class="odd">
-<th><p>Head writeback reporting for buffer queue descriptor fetch (on
-stride cross).</p>
-<p>Relevant only for the split queue model.</p></th>
-<th>VIRTCHNL2_CAP_RX_SPLITQ_HEAD_WB</th>
+<th>Single RX queue model</th>
+<th>VIRTCHNL2_QUEUE_MODEL_SINGLE negotiated via rxq_model in struct virtchnl2_create_port; model in struct virtchnl2_rxq_info</th>
 <th>0,1</th>
 <th>1</th>
 </tr>
 <tr class="header">
-<th><p>Interrupts triggering for head writeback reporting (for buffer
-queue descriptor fetch stride cross).</p>
-<p>Relevant only for the split queue model.</p></th>
-<th>VIRTCHNL2_RX_SPLITQ_INTR_ON_HEAD_WB</th>
-<th><p>0,1</p>
-<p>Can be set only when VIRTCHNL2_CAP_RX_SPLITQ_HEAD_WB is set.</p></th>
+<th>Split RX queue model</th>
+<th>VIRTCHNL2_QUEUE_MODEL_SPLIT negotiated via rxq_model in struct virtchnl2_create_port; model in struct virtchnl2_rxq_info</th>
+<th>0,1</th>
 <th>1</th>
 </tr>
 <tr class="odd">
 <th>Number of RX buffer queues per RX queue</th>
-<th><em><mark>u8 num_buf_queues_per_rx</mark></em></th>
+<th>IDPF_MAX_BUFQS_PER_RXQ_GRP</th>
 <th><p>1(large buffer queue),</p>
 <p>2(large and small buffer queues)</p></th>
 <th>2</th>
 </tr>
 <tr class="header">
-<th>Single RX queue model.</th>
-<th>VIRTCHNL2_CAP_RXQ_MODEL_SINGLE (New)</th>
+<th><p>Head writeback reporting for buffer queue descriptor fetch (on
+stride cross).</p>
+<p>Relevant only for the split queue model.</p></th>
+<th> </th>
 <th>0,1</th>
 <th>1</th>
 </tr>
 <tr class="odd">
-<th>Split RX queue model.</th>
-<th>VIRTCHNL2_CAP_RXQ_MODEL_SPLIT<br />
-(New)</th>
-<th>0,1</th>
+<th><p>Interrupts triggering for head writeback reporting (for buffer
+queue descriptor fetch stride cross).</p>
+<p>Relevant only for the split queue model.</p></th>
+<th> </th>
+<th><p>0,1</p>
+<p>Can be set only when VIRTCHNL2_CAP_RX_SPLITQ_HEAD_WB is set.</p></th>
 <th>1</th>
 </tr>
 </thead>
@@ -7667,12 +7662,49 @@ queue descriptor fetch stride cross).</p>
 
 ### TX DMA capabilities
 
-| **Capability**                       | **SW parameter**                       | **Possible values** | **Default value** |
-|--------------------------------------|----------------------------------------|---------------------|-------------------|
-| In order, split, TX queue model.     | VIRTCHNL2_TXQ_MODEL_IN_ORDER_SPLIT     | 0,1                 | 1                 |
-| In order, single, TX queue model.    | VIRTCHNL2_TXQ_MODEL_IN_ORDER_SINGLE    | 0,1                 | 1                 |
-| Out of order, split, TX queue model. | VIRTCHNL2_TXQ_MODEL_OUT_OF_ORDER_SPLIT | 0,1                 | 1                 |
-
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 36%" />
+<col style="width: 21%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Capability</strong></th>
+<th><strong>SW parameter</strong></th>
+<th><strong>Possible values</strong></th>
+<th><strong>Default value</strong></th>
+</tr>
+<tr class="odd">
+<th>Single TX queue model</th>
+<th>VIRTCHNL2_QUEUE_MODEL_SINGLE negotiated via txq_model in struct virtchnl2_create_port; model in struct virtchnl2_txq_info</th>
+<th>0,1</th>
+<th>1</th>
+</tr>
+<tr class="header">
+<th>Split TX queue model</th>
+<th>VIRTCHNL2_QUEUE_MODEL_SPLIT negotiated via txq_model in struct virtchnl2_create_port; model in struct virtchnl2_txq_info</th>
+<th>0,1</th>
+<th>1</th>
+</tr>
+<tr class="odd">
+<th>In order TX Completions</th>
+<th>VIRTCHNL2_TXQUEUE_SCHED_MODE_QUEUE negotiated via sched_mode in struct virtchnl2_txq_info</th>
+<th>0,1</th>
+<th>1</th>
+</tr>
+<tr class="header">
+<th>Out of Order TX Completions</th>
+<th>VIRTCHNL2_TXQUEUE_SCHED_MODE_FLOW negotiated via sched_mode in struct virtchnl2_txq_info. Only supported with Split TX Queue Model</th>
+<th>0,1</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+	
 ### TX Descriptor capabilities
 
 <table>
