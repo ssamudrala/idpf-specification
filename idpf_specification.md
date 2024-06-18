@@ -7678,25 +7678,25 @@ queue descriptor fetch stride cross).</p>
 </tr>
 <tr class="odd">
 <th>Single TX queue model</th>
-<th>VIRTCHNL2_QUEUE_MODEL_SINGLE negotiated via txq_model in struct virtchnl2_create_port; set via model in struct virtchnl2_txq_info</th>
+<th>VIRTCHNL2_QUEUE_MODEL_SINGLE </p>negotiated via txq_model in struct virtchnl2_create_port<p></p>set via model in struct virtchnl2_txq_info<p></th>
 <th>0,1</th>
 <th>1</th>
 </tr>
 <tr class="header">
 <th>Split TX queue model</th>
-<th>VIRTCHNL2_QUEUE_MODEL_SPLIT negotiated via txq_model in struct virtchnl2_create_port; set via model in struct virtchnl2_txq_info</th>
+<th>VIRTCHNL2_QUEUE_MODEL_SPLIT </p>negotiated via txq_model in struct virtchnl2_create_port<p></p>set via model in struct virtchnl2_txq_info<p></th>
 <th>0,1</th>
 <th>1</th>
 </tr>
 <tr class="odd">
 <th>In order TX Completions</th>
-<th>VIRTCHNL2_TXQUEUE_SCHED_MODE_QUEUE set via sched_mode in struct virtchnl2_txq_info</th>
+<th>VIRTCHNL2_TXQUEUE_SCHED_MODE_QUEUE </p>set via sched_mode in struct virtchnl2_txq_info<p></th>
 <th>0,1</th>
 <th>1</th>
 </tr>
 <tr class="header">
 <th>Out of Order TX Completions. Only supported with Split TX Queue Model</th>
-<th>VIRTCHNL2_TXQUEUE_SCHED_MODE_FLOW set via sched_mode in struct virtchnl2_txq_info</th>
+<th>VIRTCHNL2_TXQUEUE_SCHED_MODE_FLOW </p>set via sched_mode in struct virtchnl2_txq_info<p></th>
 <th>0,1</th>
 <th>1</th>
 </tr>
