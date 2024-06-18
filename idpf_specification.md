@@ -7819,6 +7819,7 @@ Field is described in byte units.</th>
 <th>Min LSO header length as sent by the driver (excluding any expansion
 done by the device).</th>
 <th></th>
+<th></th>
 <th>17</th>
 </tr>
 <tr class="header">
