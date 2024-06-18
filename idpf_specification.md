@@ -7723,13 +7723,13 @@ queue descriptor fetch stride cross).</p>
 </tr>
 <tr class="odd">
 <th>Max number of context descriptors per SSO packet</th>
-<th><em><mark>max_ctxt_desc_per_sso_packet</mark></em></th>
+<th></th>
 <th></th>
 <th>1</th>
 </tr>
 <tr class="header">
 <th>Max number of context descriptors per LSO segment</th>
-<th><em><mark>max_ctxt_desc_per_lso_segment</mark></em></th>
+<th></th>
 <th></th>
 <th>1</th>
 </tr>
@@ -7737,7 +7737,7 @@ queue descriptor fetch stride cross).</p>
 <th><p>Max data buffers per SSO/LSO packet.</p>
 <p>Note : When equals to 18 SW can avoid any calculations or check for
 linearization for Linux.</p></th>
-<th><em><mark>max_sg_bufs_per_tx_pkt</mark></em></th>
+<th>max_sg_bufs_per_tx_pkt in struct virtchnl2_get_capabilities</th>
 <th>1 to 18</th>
 <th>10</th>
 </tr>
@@ -7746,21 +7746,21 @@ linearization for Linux.</p></th>
 buffers</p>
 <p>(partial header buffer when one buffer holds last bytes of header and
 first bytes of payload)</p></th>
-<th><em>max_hdr_buf_per_lso</em></th>
+<th></th>
 <th></th>
 <th>3</th>
 </tr>
 <tr class="odd">
 <th><p>Min spacing between 2 RS marked descriptors<em>.</em></p>
 <p>Note : this capability is a queue level capability<em>.</em></p></th>
-<th>IECM_TX_RS_MIN_GAP</th>
+<th></th>
 <th></th>
 <th>0</th>
 </tr>
 <tr class="header">
 <th><p>Min spacing between 2 RE marked descriptors.</p>
 <p>Note : this capability is a queue level capability.</p></th>
-<th>IECM_TX_SPLITQ_RE_MIN_GAP</th>
+<th>IDPF_TX_SPLITQ_RE_MIN_GAP</th>
 <th></th>
 <th>32</th>
 </tr>
