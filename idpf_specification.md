@@ -7695,8 +7695,8 @@ queue descriptor fetch stride cross).</p>
 <th>1</th>
 </tr>
 <tr class="header">
-<th>Out of Order TX Completions. Only supported with Split TX Queue Model</th>
-<th>VIRTCHNL2_TXQUEUE_SCHED_MODE_FLOW </p>set via sched_mode in struct virtchnl2_txq_info<p></th>
+<th>Out of Order TX Completions </p>Only supported with Split TX Queue Model<p></th>
+<th>VIRTCHNL2_TXQUEUE_SCHED_MODE_FLOW </p>negotiated via VIRTCHNL2_CAP_SPLITQ_QSCHED other_caps bit in struct virtchnl2_get_capabilities </p>set via sched_mode in struct virtchnl2_txq_info<p></th>
 <th>0,1</th>
 <th>1</th>
 </tr>
