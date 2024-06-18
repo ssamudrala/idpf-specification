@@ -7789,21 +7789,21 @@ first bytes of payload)</p></th>
 </tr>
 <tr class="odd">
 <th>Max TX buffer size.</th>
-<th><em>tx_max_desc_data</em></th>
+<th>IDPF_TX_MAX_DESC_DATA</th>
 <th></th>
 <th>16K</th>
 </tr>
 <tr class="header">
 <th>Max LSO payload length.</th>
 <th><blockquote>
-<p><em><mark>max_lso_payload_len</mark></em></p>
+<p></p>
 </blockquote></th>
 <th></th>
 <th>256K-1</th>
 </tr>
 <tr class="odd">
 <th>Min MSS for LSO</th>
-<th><em><mark>min_mss_for_lso</mark></em></th>
+<th>IDPF_TX_TSO_MIN_MSS</th>
 <th></th>
 <th>88</th>
 </tr>
@@ -7811,17 +7811,13 @@ first bytes of payload)</p></th>
 <th>Min SSO/LSO packet size as sent by the driver (excluding any
 expansion done by the device).<br />
 Field is described in byte units.</th>
-<th><p><strong><mark>IECM_TX_MIN_LEN</mark></strong></p>
-<p><mark></mark></p></th>
+<th>IDPF_TX_MIN_PKT_LEN</th>
 <th></th>
 <th>17</th>
 </tr>
 <tr class="odd">
 <th>Min LSO header length as sent by the driver (excluding any expansion
 done by the device).</th>
-<th><blockquote>
-<p><em><mark>min_lso_header_len</mark></em></p>
-</blockquote></th>
 <th></th>
 <th>17</th>
 </tr>
@@ -7831,7 +7827,7 @@ expansion done by the device).</p>
 <p>Note : Device is obligated to check the max_mtu on the TX path. On
 the RX path ,the device is not required to check the max_mtu which means
 that host SW can accept packets bigger than max_mtu.</p></th>
-<th><em><strong><mark>max_mtu</mark></strong></em></th>
+<th>max_mtu in struct virtchnl2_create_vport</th>
 <th></th>
 <th>9KB</th>
 </tr>
@@ -7840,8 +7836,7 @@ that host SW can accept packets bigger than max_mtu.</p></th>
 (excluding any expansion done by the device).</p>
 <p>Device does not support segmentation for a header longer than
 that.</p></th>
-<th><p><em><strong><mark>max_tx_hdr_len_seg</mark></strong></em></p>
-<p><mark></mark></p></th>
+<th></th>
 <th></th>
 <th>255</th>
 </tr>
@@ -7853,8 +7848,7 @@ that.</p></th>
 header.</p>
 <p>Note : Generic offload is an offload that is executed using offsets
 from the TX descriptor.</p></th>
-<th><p><em><strong><mark>max_tx_hdr_generic_offloads</mark></strong></em></p>
-<p><mark></mark></p></th>
+<th></th>
 <th></th>
 <th>256</th>
 </tr>
@@ -7865,8 +7859,7 @@ from the TX descriptor.</p></th>
 deeper in the packet header.</p>
 <p>Note : Non generic checksum offload is a checksum offload that is
 executed using offsets from the Device parser.</p></th>
-<th><p><em><strong><mark>max_tx_hdr_HWparse_csum</mark></strong></em></p>
-<p><mark></mark></p></th>
+<th></th>
 <th></th>
 <th>256</th>
 </tr>
