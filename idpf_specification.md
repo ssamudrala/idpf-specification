@@ -7621,13 +7621,13 @@ enablement operation</th>
 </tr>
 <tr class="odd">
 <th>Single RX queue model</th>
-<th>VIRTCHNL2_QUEUE_MODEL_SINGLE negotiated via rxq_model in struct virtchnl2_create_port; model in struct virtchnl2_rxq_info</th>
+<th>VIRTCHNL2_QUEUE_MODEL_SINGLE </p>negotiated via rxq_model in struct virtchnl2_create_port<p></p> set via model in struct virtchnl2_rxq_info<p></th>
 <th>0,1</th>
 <th>1</th>
 </tr>
 <tr class="header">
 <th>Split RX queue model</th>
-<th>VIRTCHNL2_QUEUE_MODEL_SPLIT negotiated via rxq_model in struct virtchnl2_create_port; model in struct virtchnl2_rxq_info</th>
+<th>VIRTCHNL2_QUEUE_MODEL_SPLIT </p>negotiated via rxq_model in struct virtchnl2_create_port<p></p>set via model in struct virtchnl2_rxq_info<p></p></th>
 <th>0,1</th>
 <th>1</th>
 </tr>
