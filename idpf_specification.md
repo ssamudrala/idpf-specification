@@ -7541,10 +7541,10 @@ Note that num_queues may be larger than the default number of queues.
 
 # Default device capabilities and parameter values assumed by the IDPF driver
 
-This section lists the default and possible values of parmeters associated with various device capabilities. By default, any driver that is compliant with the spec should use the default value for these parameters. In order to use a non default value, the driver must negotiate the values with the
-control plane. 
+This section lists the default and possible values of parameters associated with various device capabilities. By default, any driver that is compliant with the spec must use the default values for these parameters. In order to use non default values, the driver must either learn or negotiate the values with the
+control plane. For ex: 10 is the default value for the maximum number of data buffers per TX packet. So the driver needs to linearize the skb if the data is spread across more than 10 buffers requiring more than 10 descriptors. This value can be learnt via response to the GET_CAPS request from the control plane in  max_sg_bufs_per_tx_pkt field of struct virtchnl2_get_capabilities. SW Parameter column in the tables below shows either the hardcoded default value or a field in the virtchnl structures used to learn or negotiate the value.
   
-Virtchannel data structures for vport configuration, queue configuration etc have enough padding defined to be able to accommodate negotiation of non-default values with the Device control plane in future.
+Virtchannel data structures for device configuration, vport configuration, queue configuration etc have enough padding defined to be able to accommodate negotiation of non-default values with the Device control plane in future.
 
 ### Interrupt capabilities
 
