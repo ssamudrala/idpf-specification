@@ -7890,7 +7890,7 @@ executed using offsets from the Device parser.</p></th>
 <tr class="odd">
 <th>Minimum buffer size supported for single queue model.<br />
 Field is described in 128B units.</th>
-<th><em><mark>min_rx_buf_sz_single_queue</mark></em></th>
+<th>IDPF_RX_BUF_2048</mark></th>
 <th></th>
 <th>2K</th>
 </tr>
@@ -7898,7 +7898,7 @@ Field is described in 128B units.</th>
 <th>Minimum “large RX buffer” size supported for split queue
 model.<br />
 Field is described in 128B units.</th>
-<th><em><mark>min_large_rx_buf_sz_split_queue</mark></em></th>
+<th>IDPF_RX_BUF_4096</th>
 <th></th>
 <th>4K</th>
 </tr>
@@ -7906,7 +7906,7 @@ Field is described in 128B units.</th>
 <th>Minimum “small RX buffer” size supported for split queue
 model.<br />
 Field is described in 128B units.</th>
-<th><em><mark>min_small_rx_buf_sz_split_queue</mark></em></th>
+<th>IDPF_RX_BUF_2048</th>
 <th></th>
 <th>2K</th>
 </tr>
@@ -7914,7 +7914,7 @@ Field is described in 128B units.</th>
 <th><p>Minimum “RX header buffer” size supported for header split.<br />
 Field is described in 64B units.</p>
 <p>Relevant for both single and split queue models.</p></th>
-<th><p><em><mark>min_rx_hdr_buf_sz</mark></em></p>
+<th>IDPF_RX_HDR_SIZE</p>
 <p><mark></mark></p></th>
 <th></th>
 <th>256</th>
@@ -7957,25 +7957,25 @@ Field is described in 64B units.</th>
 </tr>
 <tr class="odd">
 <th>RX checksum support for most inner headers.</th>
-<th><em><mark>VIRTCHNL2_CAP_RX_CSUM_L3_IPV4_IN0
+<th>VIRTCHNL2_CAP_RX_CSUM_L3_IPV4_IN0
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV4_TCP_IN0
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV4_UDP_IN0
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV4_SCTP_IN0
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV6_TCP_IN0
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV6_UDP_IN0
-VIRTCHNL2_CAP_RX_CSUM_L4_IPV6_SCTP_IN0</mark></em></th>
+VIRTCHNL2_CAP_RX_CSUM_L4_IPV6_SCTP_IN0</th>
 <th></th>
 <th></th>
 </tr>
 <tr class="header">
 <th>RX checksum support for 1<sup>st</sup> inner tunnel.</th>
-<th><em><mark>VIRTCHNL2_CAP_RX_CSUM_L3_IPV4_IN1
+<th>VIRTCHNL2_CAP_RX_CSUM_L3_IPV4_IN1
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV4_TCP_IN1<br />
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV4_UDP_IN1
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV4_SCTP_IN1
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV6_TCP_IN1
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV6_UDP_IN1
-VIRTCHNL2_CAP_RX_CSUM_L4_IPV6_SCTP_IN1</mark></em></th>
+VIRTCHNL2_CAP_RX_CSUM_L4_IPV6_SCTP_IN1</th>
 <th></th>
 <th></th>
 </tr>
@@ -7984,13 +7984,13 @@ VIRTCHNL2_CAP_RX_CSUM_L4_IPV6_SCTP_IN1</mark></em></th>
 <p>In case the packet parser supports more than 2 tunnels , this
 capability represents the 2<sup>nd</sup> tunnel and the following
 ones.</p></th>
-<th><em><mark>VIRTCHNL2_CAP_RX_CSUM_L3_IPV4_IN2
+<th>VIRTCHNL2_CAP_RX_CSUM_L3_IPV4_IN2
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV4_TCP_IN2<br />
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV4_UDP_IN2
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV4_SCTP_IN2
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV6_TCP_IN2
 VIRTCHNL2_CAP_RX_CSUM_L4_IPV6_UDP_IN2
-VIRTCHNL2_CAP_RX_CSUM_L4_IPV6_SCTP_IN2</mark></em></th>
+VIRTCHNL2_CAP_RX_CSUM_L4_IPV6_SCTP_IN2</th>
 <th></th>
 <th></th>
 </tr>
@@ -7998,13 +7998,13 @@ VIRTCHNL2_CAP_RX_CSUM_L4_IPV6_SCTP_IN2</mark></em></th>
 <th><p>TX checksum support for most inner headers.</p>
 <p>Note : Those capabilities are relevant only for an SSO. For LSO the
 packet checksums must be calculated by Device.</p></th>
-<th><em><mark>VIRTCHNL2_CAP_TX_CSUM_L3_IPV4_IN0
+<th>VIRTCHNL2_CAP_TX_CSUM_L3_IPV4_IN0
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV4_TCP_IN0
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV4_UDP_IN0
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV4_SCTP_IN0
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_TCP_IN0
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_UDP_IN0
-VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_SCTP_IN0</mark></em></th>
+VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_SCTP_IN0</th>
 <th></th>
 <th></th>
 </tr>
@@ -8012,13 +8012,13 @@ VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_SCTP_IN0</mark></em></th>
 <th><p>TX checksum support for 1<sup>st</sup> inner tunnel.</p>
 <p>Note : Those capabilities are relevant only for an SSO. For LSO the
 packet checksums must be calculated by Device.</p></th>
-<th><p><em><mark>VIRTCHNL2_CAP_TX_CSUM_L3_IPV4_IN1
+<th><p>VIRTCHNL2_CAP_TX_CSUM_L3_IPV4_IN1
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV4_TCP_IN1<br />
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV4_UDP_IN1
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV4_SCTP_IN1
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_TCP_IN1
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_UDP_IN1
-VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_SCTP_IN1</mark></em></p>
+VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_SCTP_IN1</p>
 <p><mark></mark></p></th>
 <th></th>
 <th></th>
@@ -8029,19 +8029,19 @@ VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_SCTP_IN1</mark></em></p>
 represents the 2<sup>nd</sup> tunnel and the following ones.</p>
 <p>Note : Those capabilities are relevant only for an SSO. For LSO the
 packet checksums must be calculated by Device.</p></th>
-<th><em><mark>VIRTCHNL2_CAP_TX_CSUM_L3_IPV4_IN2
+<th>VIRTCHNL2_CAP_TX_CSUM_L3_IPV4_IN2
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV4_TCP_IN2<br />
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV4_UDP_IN2
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV4_SCTP_IN2
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_TCP_IN2
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_UDP_IN2
-VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_SCTP_IN2</mark></em></th>
+VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_SCTP_IN2</th>
 <th></th>
 <th></th>
 </tr>
 <tr class="odd">
 <th>Support RX packet raw checksum calculation.</th>
-<th><em><mark>VIRTCHNL2_CAP_RX_CSUM_GENERIC</mark></em></th>
+<th>VIRTCHNL2_CAP_RX_CSUM_GENERIC</th>
 <th></th>
 <th></th>
 </tr>
