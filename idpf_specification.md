@@ -7564,13 +7564,13 @@ Virtchannel data structures for device configuration, vport configuration, queue
 </tr>
 <tr class="odd">
 <th>ITR interval granularity</th>
-<th>  </th>
+<th> IDPF_ITR_GRAN_S </th>
 <th>0.5 us , 1 us , 2 us , 4 us</th>
 <th>2 us</th>
 </tr>
 <tr class="header">
 <th>Number of ITRs per vector</th>
-<th></th>
+<th> VIRTCHNL2_ITR_IDX_0  VIRTCHNL2_ITR_IDX_1 </th>
 <th>8’b00001011 - ITR0,ITR1 and NOITR.<br />
 8’b00001111 - ITR0,ITR1,ITR2 and NOITR.<br />
 <br />
@@ -7651,8 +7651,7 @@ stride cross).</p>
 queue descriptor fetch stride cross).</p>
 <p>Relevant only for the split queue model.</p></th>
 <th> </th>
-<th><p>0,1</p>
-<p>Can be set only when VIRTCHNL2_CAP_RX_SPLITQ_HEAD_WB is set.</p></th>
+<th><p>0,1</p></th>
 <th>1</th>
 </tr>
 </thead>
@@ -7762,7 +7761,7 @@ first bytes of payload)</p></th>
 <p>Note : this capability is a queue level capability.</p></th>
 <th>IDPF_TX_SPLITQ_RE_MIN_GAP</th>
 <th></th>
-<th>32</th>
+<th>64</th>
 </tr>
 </thead>
 <tbody>
@@ -7791,7 +7790,7 @@ first bytes of payload)</p></th>
 <th>Max TX buffer size.</th>
 <th>IDPF_TX_MAX_DESC_DATA</th>
 <th></th>
-<th>16K</th>
+<th>16K-1</th>
 </tr>
 <tr class="header">
 <th>Max LSO payload length.</th>
