@@ -7704,7 +7704,7 @@ queue descriptor fetch stride cross).</p>
 </tbody>
 </table>
 	
-### TX Descriptor capabilities
+### TX Queue capabilities
 
 <table>
 <colgroup>
@@ -7731,20 +7731,26 @@ queue descriptor fetch stride cross).</p>
 <th>IDPF_MIN_TXQ_COMPLQ_DESC</th>
 <th></th>
 <th>256</th>
-</tr>	
+</tr>
 <tr class="odd">
+<th>TX Queue descriptor count multiple  </th>
+<th>IDPF_REQ_DESC_MULTIPLE</th>
+<th></th>
+<th>32</th>
+</tr>
+<tr class="header">
 <th>Max number of context descriptors per SSO packet</th>
 <th></th>
 <th></th>
 <th>1</th>
 </tr>
-<tr class="header">
+<tr class="odd">
 <th>Max number of context descriptors per LSO segment</th>
 <th></th>
 <th></th>
 <th>1</th>
 </tr>
-<tr class="odd">
+<tr class="header">
 <th><p>Max data buffers per SSO/LSO packet.</p>
 <p>Note : When equals to 18 SW can avoid any calculations or check for
 linearization for Linux.</p></th>
@@ -7752,7 +7758,7 @@ linearization for Linux.</p></th>
 <th>1 to 18</th>
 <th>10</th>
 </tr>
-<tr class="header">
+<tr class="odd">
 <th><p>Max number of header buffers per LSO or partial header
 buffers</p>
 <p>(partial header buffer when one buffer holds last bytes of header and
@@ -7761,14 +7767,14 @@ first bytes of payload)</p></th>
 <th></th>
 <th>3</th>
 </tr>
-<tr class="odd">
+<tr class="header">
 <th><p>Min spacing between 2 RS marked descriptors<em>.</em></p>
 <p>Note : this capability is a queue level capability<em>.</em></p></th>
 <th></th>
 <th></th>
 <th>0</th>
 </tr>
-<tr class="header">
+<tr class="odd">
 <th><p>Min spacing between 2 RE marked descriptors.</p>
 <p>Note : this capability is a queue level capability.</p></th>
 <th>IDPF_TX_SPLITQ_RE_MIN_GAP</th>
@@ -7882,7 +7888,7 @@ executed using offsets from the Device parser.</p></th>
 
 ### 
 
-### RX Descriptor capabilities
+### RX Queue capabilities
 
 <table>
 <colgroup>
@@ -7903,6 +7909,18 @@ executed using offsets from the Device parser.</p></th>
 <th>IDPF_MIN_RXQ_DESC</th>
 <th></th>
 <th>64</th>
+</tr>
+<tr class="header">
+<th>Max number of RX Buffer Queues per RX Queue</th>
+<th>IDPF_MAX_BUFQS_PER_RXQ_GRP</th>
+<th></th>
+<th>2</th>
+</tr>
+<tr class="odd">
+<th>RX Queue descriptor count multiple  </th>
+<th>IDPF_REQ_RXQ_DESC_MULTIPLE</th>
+<th></th>
+<th>32 * IDPF_MAX_BUFQS_PER_RXQ_GRP</th>
 </tr>
 </thead>
 <tbody>
