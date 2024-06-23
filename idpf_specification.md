@@ -7721,6 +7721,18 @@ queue descriptor fetch stride cross).</p>
 <th><strong>Default value</strong></th>
 </tr>
 <tr class="odd">
+<th>Min number of descriptors per TX Queue</th>
+<th>IDPF_MIN_TXQ_DESC</th>
+<th></th>
+<th>64</th>
+</tr>
+<tr class="header">
+<th>Min number of descriptors per TX Completion Queue</th>
+<th>IDPF_MIN_TXQ_COMPLQ_DESC</th>
+<th></th>
+<th>256</th>
+</tr>	
+<tr class="odd">
 <th>Max number of context descriptors per SSO packet</th>
 <th></th>
 <th></th>
@@ -7862,6 +7874,35 @@ executed using offsets from the Device parser.</p></th>
 <th></th>
 <th></th>
 <th>256</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+### 
+
+### RX Descriptor capabilities
+
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 36%" />
+<col style="width: 21%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Capability</strong></th>
+<th><strong>SW parameter</strong></th>
+<th><strong>Possible values</strong></th>
+<th><strong>Default value</strong></th>
+</tr>
+<tr class="odd">
+<th>Min number of descriptors per RX Queue</th>
+<th>IDPF_MIN_RXQ_DESC</th>
+<th></th>
+<th>64</th>
 </tr>
 </thead>
 <tbody>
