@@ -7733,10 +7733,22 @@ queue descriptor fetch stride cross).</p>
 <th>256</th>
 </tr>
 <tr class="odd">
-<th>TX Queue descriptor count multiple  </th>
+<th>TX Queue descriptor count multiple </th>
 <th>IDPF_REQ_DESC_MULTIPLE</th>
 <th></th>
 <th>32</th>
+</tr>
+<tr class="header">
+<th>Max number of descriptors per TX Queue</th>
+<th>IDPF_MAX_TXQ_DESC</th>
+<th></th>
+<th>ALIGN_DOWN(8160, IDPF_REQ_DESC_MULTIPLE)</th>
+</tr>
+<tr class="odd">
+<th>Min number of descriptors per TX Queue</th>
+<th>IDPF_MIN_TXQ_DESC</th>
+<th></th>
+<th>64</th>
 </tr>
 <tr class="header">
 <th>Max number of context descriptors per SSO packet</th>
@@ -7922,6 +7934,13 @@ executed using offsets from the Device parser.</p></th>
 <th></th>
 <th>32 * IDPF_MAX_BUFQS_PER_RXQ_GRP</th>
 </tr>
+</tr>
+<tr class="header">
+<th>Max number of descriptors per RX Queue</th>
+<th>IDPF_MAX_RXQ_DESC</th>
+<th></th>
+<th>ALIGN_DOWN(8160, IDPF_REQ_RXQ_DESC_MULTIPLE)</th>
+</tr>
 </thead>
 <tbody>
 </tbody>
@@ -7972,7 +7991,7 @@ Field is described in 128B units.</th>
 <th><p>Minimum “RX header buffer” size supported for header split.<br />
 Field is described in 64B units.</p>
 <p>Relevant for both single and split queue models.</p></th>
-<th>IDPF_RX_HDR_SIZE</p>
+<th>IDPF_HDR_BUF_SIZE</p>
 <p><mark></mark></p></th>
 <th></th>
 <th>256</th>
@@ -7981,14 +8000,14 @@ Field is described in 64B units.</p>
 <th><p>Maximum RX buffer size.<br />
 Field is described in 128B units.</p>
 <p>Relevant for all buffers except for “RX header buffer”</p></th>
-<th><em><mark>max_rx_buf_sz</mark></em></th>
+<th></th>
 <th></th>
 <th>16KB-128B</th>
 </tr>
 <tr class="header">
 <th>Maximum “RX header buffer” size.<br />
 Field is described in 64B units.</th>
-<th><em><mark>max_rx_hdr_buf_sz</mark></em></th>
+<th></th>
 <th></th>
 <th>1KB-64B</th>
 </tr>
