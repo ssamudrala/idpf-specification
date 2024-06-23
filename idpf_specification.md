@@ -7941,6 +7941,19 @@ executed using offsets from the Device parser.</p></th>
 <th></th>
 <th>ALIGN_DOWN(8160, IDPF_REQ_RXQ_DESC_MULTIPLE)</th>
 </tr>
+<tr class="odd">
+<th>Max number of RX Packet Types in Split Queue Model</th>
+<th>IDPF_RX_MAX_PTYPE</th>
+<th></th>
+<th>1024</th>
+</tr>
+</tr>
+<tr class="header">
+<th>Max number of RX Packet Types in Single Queue Model</th>
+<th>IDPF_RX_MAX_BASE_PTYPE</th>
+<th></th>
+<th>256</th>
+</tr>
 </thead>
 <tbody>
 </tbody>
