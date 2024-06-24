@@ -8108,8 +8108,7 @@ VIRTCHNL2_CAP_TX_CSUM_L4_IPV4_UDP_IN1
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV4_SCTP_IN1
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_TCP_IN1
 VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_UDP_IN1
-VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_SCTP_IN1</p>
-<p><mark></mark></p></th>
+VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_SCTP_IN1</th>
 <th></th>
 <th></th>
 </tr>
@@ -8137,7 +8136,7 @@ VIRTCHNL2_CAP_TX_CSUM_L4_IPV6_SCTP_IN2</th>
 </tr>
 <tr class="header">
 <th>Support TX packet generic checksum calculation.</th>
-<th><em><mark>VIRTCHNL2_CAP_TX_CSUM_GENERIC</mark></em></th>
+<th>VIRTCHNL2_CAP_TX_CSUM_GENERIC</th>
 <th></th>
 <th></th>
 </tr>
